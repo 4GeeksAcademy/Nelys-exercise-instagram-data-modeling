@@ -1,6 +1,6 @@
 import os
 import sys
-from sqlalchemy import Column, ForeignKey, Integer, String
+from sqlalchemy import Column, ForeignKey, Integer, String, Bool
 from sqlalchemy.orm import relationship, declarative_base
 from sqlalchemy import create_engine
 from eralchemy2 import render_er
@@ -22,7 +22,7 @@ class Followers(Base):
     users = relationship(Users)
     user_id = Column(Integer, ForeignKey('users.id'))
     users = relationship(Users)
-    accepted = Column(Integer)
+    accepted = Column(Bool)
 
 class Post(Base):
     __tablename__ = 'post'
