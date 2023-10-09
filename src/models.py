@@ -30,6 +30,7 @@ class Post(Base):
     user_id = Column(Integer, ForeignKey('users.id'))
     users = relationship(Users)
     photo = Column(String(50))
+    video = Column(String(50))
     description = Column(String(250))
     created_at = Column(String(50))
     update_at = Column(String(50))
